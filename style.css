@@ -7,7 +7,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
+    background-color: #333;
     color: white;
     padding: 10px 20px;
 
@@ -30,7 +30,7 @@ header{
 
 }
 
-.menu-icon spam{
+.menu-icon span{
     height: 3px;
     background-color: white;
     margin: 4px 0;
@@ -38,7 +38,7 @@ header{
 
 }
 
-nav {
+nav{
     background-color: #444;
     display: none;
     flex-direction: column;
@@ -61,12 +61,19 @@ nav a:hover{
 }
 
 @media (min-width: 768px){
-.menu-icon{
-    display: flex
-}
+    .menu-icon{
+        display: none;
+    }
 
-nav a{
-    border: none;
-}
-   
+    nav{
+        display: flex!important;
+        flex-direction: row;
+        background-color: none;
+
+    }
+
+    nav a{
+        border:none;
+        
+    }
 }
