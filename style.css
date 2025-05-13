@@ -1,10 +1,45 @@
-* {
+body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-nav {
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo{
+    font-size: 1.5rem;
+
+}
+
+#menu-tpggle{
+    display: none;
+
+}
+
+.menu-icon{
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    cursor: pointer;
+
+}
+
+.menu-icon{
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+    border-radius: 2px;
+
+}
+
+nav{
     background-color: aquamarine;
     padding: 10px 20px;
     position: relative;
