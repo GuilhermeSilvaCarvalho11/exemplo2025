@@ -1,79 +1,74 @@
-body{
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #333;
-    color: white;
+body{
+    font-family:Arial,sans-serif;
+
+    }
+
+nav {
+    background-color: rgb(25, 107, 201);
     padding: 10px 20px;
-
+    position: relative;
 }
 
-.logo{
-    font-size: 1.5rem;
-}
-
-#menu-toggle{
+.menu-toggle {
     display: none;
-
 }
 
-.menu-icon{
-    display: flex;
+.hamburger {
+    display: none;
     flex-direction: column;
-    width: 30px;
     cursor: pointer;
-
+    width: 30px;
+    height: 25px;
+    justify-content: space-between;
 }
 
-.menu-icon span{
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-    border-radius: 2px;
-
+.hamburger span {
+    height: 4px;
+    background-color: rgb(255, 214, 30);
 }
 
-nav{
-    background-color: #444;
-    display: none;
-    flex-direction: column;
-}
-
-nav a{
-    color: white;
-    padding: 15px 20px;
-    text-decoration: none;
-    border-bottom: 1px solid #555;
-}
-
-nav a:hover{
-    background-color: #555;
-
-}
-
-#menu-toggle:checked + label + nav{
+ul.menu {
+    list-style: none;
     display: flex;
+    gap: 20px;
 }
 
-@media (min-width: 768px){
-    .menu-icon{
-        display: none;
-    }
+ul.menu li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
 
-    nav{
-        display: flex!important;
-        flex-direction: row;
-        background-color: none;
+h1 {
+    align-items: center;
+    text-align: center;
+    color: aliceblue;
 
-    }
+}
 
-    nav a{
-        border:none;
-        
+/*Responsivo*/
+@media (max-width:768px){
+.hamburger{
+    display: flex;
     }
+ul.menu{
+    display:none;
+    flex-direction:column;
+background:#333;
+position:absolute;
+top:60px;
+left:0;
+width:100%;
+}
+
+.menu-toggle:checked
++.hamburger + ul.menu{
+display: flex;
+}
+
 }
