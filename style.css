@@ -1,24 +1,23 @@
 body{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #333;
+    background-color: white;
     color: white;
     padding: 10px 20px;
+
 }
 
 .logo{
     font-size: 1.5rem;
-
 }
 
-#menu-tpggle{
+#menu-toggle{
     display: none;
 
 }
@@ -31,46 +30,43 @@ header{
 
 }
 
-.menu-icon{
+.menu-icon spam{
     height: 3px;
-    background: white;
+    background-color: white;
     margin: 4px 0;
     border-radius: 2px;
 
 }
 
-nav{
-    background-color: aquamarine;
-    padding: 10px 20px;
-    position: relative;
-}
-
-.menu-toggle {
-    display: none;
-}
-
-.hamburguer {
+nav {
+    background-color: #444;
     display: none;
     flex-direction: column;
-    cursor: pointer;
-    width: 30px;
-    height: 25px;
-    justify-content: space-between;
 }
 
-.hamburguer span {
-    height: 4px;
-    background: rgb(226, 0, 0);
-    border-radius: 2px;
-}
-
-ul.menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-ul.menu {
-    color: pink;
+nav a{
+    color: white;
+    padding: 15px 20px;
     text-decoration: none;
+    border-bottom: 1px solid #555;
+}
+
+nav a:hover{
+    background-color: #555;
+
+}
+
+#menu-toggle:checked + label + nav{
+    display: flex;
+}
+
+@media (min-width: 768px){
+.menu-icon{
+    display: flex
+}
+
+nav a{
+    border: none;
+}
+   
 }
